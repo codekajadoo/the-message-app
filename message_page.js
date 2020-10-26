@@ -1,16 +1,15 @@
-//YOUR FIRE BASE LINKS
 var firebaseConfig = {
-   apiKey: "AIzaSyB9G5mJNgmkwpLF-8ar8u4QQ0EVC41FIlc",
-   authDomain: "talk-and-chat-186ab.firebaseapp.com",
-   databaseURL: "https://talk-and-chat-186ab.firebaseio.com",
-   projectId: "talk-and-chat-186ab",
-   storageBucket: "talk-and-chat-186ab.appspot.com",
-   messagingSenderId: "307954488325",
-   appId: "1:307954488325:web:be504923a9cded757a386c",
-   measurementId: "G-WT1PCYRG55"
- };
- // Initialize Firebase
- firebase.initializeApp(firebaseConfig);
+    apiKey: "AIzaSyBQdI_KropcoFXxPN-Es4noalL87tmQUxY",
+    authDomain: "talk-n-chat-89381.firebaseapp.com",
+    databaseURL: "https://talk-n-chat-89381.firebaseio.com",
+    projectId: "talk-n-chat-89381",
+    storageBucket: "talk-n-chat-89381.appspot.com",
+    messagingSenderId: "1093894619742",
+    appId: "1:1093894619742:web:895e78cfe6aa48211eaacf",
+    measurementId: "G-49N4MTSMV6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 user_name = localStorage.getItem("user_name");
 room_name = localStorage.getItem("room_name");
 
