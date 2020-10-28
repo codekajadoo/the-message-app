@@ -1,0 +1,70 @@
+<html>
+<head>
+<script src='https://meet.jit.si/external_api.js'></script>
+</head>
+<style>
+button{
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+background-color: #0192c6;
+color: azure;
+border: blue;
+font-size: 32px;
+margin-bottom: 25px;
+}
+section{
+padding: 3px;
+background-color: black;
+width: 88px;
+}
+body{
+padding: 3px;
+margin: 0;
+text-align: center;
+background-color: #313131;
+}
+.meet{
+padding: 5px;
+}
+h3{
+color: white;
+}
+</style>
+<body>
+<h3>Press start to begin the meet</h3>
+<button id="start" type="button"><section>Start</section></button>
+
+<div id="jitsi-container" class="meet">
+</div>
+
+<script>
+var button = document.querySelector('#start');
+var container = document.querySelector('#jitsi-container');
+var api = null;
+
+button.addEventListener('click', () => {
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var stringLength = 30;
+
+    function pickRandom() {
+    return possible[Math.floor(Math.random() * possible.length)];
+    }
+
+var randomString = Array.apply(null, Array(stringLength)).map(pickRandom).join('');
+
+    var domain = "meet.jit.si";
+    var options = {
+        "roomName": randomString,
+        "parentNode": container,
+        "width": 1900,
+        "height": 800,
+    };
+    api = new JitsiMeetExternalAPI(domain, options);
+});
+
+</script>
+</body>
+</html>
+           
